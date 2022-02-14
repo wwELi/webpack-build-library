@@ -1,4 +1,4 @@
 export function add(a, b) {
     console.log('---add func---');
-    return a + b;
+    return Number(a) + Number(b);
 }
