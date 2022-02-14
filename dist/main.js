@@ -1,4 +1,14 @@
-/******/ (() => { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define("Cul", [], factory);
+	else if(typeof exports === 'object')
+		exports["Cul"] = factory();
+	else
+		root["Cul"] = factory();
+})(typeof self !== 'undefined' ? self : this, function() {
+return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -40,8 +50,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function add(a, b) {
     console.log('---add func---');
-    return a + b;
+    return Number(a) + Number(b);
 }
-window.Cul = __webpack_exports__.add;
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
+});
